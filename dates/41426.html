@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April 14, 2026</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <main class="container">
+        <header class="post-date" id="display-date"></header>
+
+        <article class="post-content">
+            <p>
+                Welp, this is the first of these blorges here, not much to say, other than my friend getting a Tamagotchi for some reason. 
+                Honestly, my life is incredibly uneventful, so this was probably a mistake.
+            </p>
+        </article>
+
+        <section class="post-image">
+            <img src="image.png" alt="Blog Illustration">
+        </section>
+    </main>
+
+    <script>
+        // This small script automatically fills in today's date 
+        // so you don't have to type it manually every time.
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('display-date').innerText = new Date().toLocaleDateString(undefined, options);
+    </script>
+
+</body>
+</html>
