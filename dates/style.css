@@ -1,33 +1,55 @@
-/* General page styling */
+        @font-face {
+  font-family: "LCDSolid"; /* Simplified name (no spaces) */
+  src: url("../../LcdSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     margin: 0;
+    background-color: #00008B;
+    color: white;
+    text-align: center;
     padding: 40px 20px;
+    font-family: "LCDSolid", sans-serif; /* Applied here */
+}
+        
+        section { padding: 50px 20px; border-bottom: 2px solid rgba(255,255,255,0.2); }
+        .grey-section { background-color: #114111; } /* Example for separate color scales */
+
+}
+
+.game-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
-.container {
-    max-width: 800px; /* Limits width for better readability */
-    width: 100%;
-}
-
-/* [CURRENT DATE] Styling */
-.post-date {
-    font-size: 1.5rem;
+.game-button {
+    display: block;
+    padding: 20px 30px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: #666;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(95,158,160,0.6);
+    transition: all 0.3s ease;
 }
 
-/* Blah Blah Blah Styling */
-.post-content {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    text-align: justify; /* Keeps text edges clean like a newspaper */
+.game-button:hover {
+    background: rgba(0,0,0,0.7);
+    transform: scale(1.05);
+}
+
+a.back {
+    display: inline-block;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* IMAGE Styling */
