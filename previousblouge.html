@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Older Blouges</title>
+    <style>
+        /* Base Styling: Denim Blue Theme */
+        @font-face {
+  font-family: "LCDSolid"; /* Simplified name (no spaces) */
+  src: url("LcdSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "LCDSolid", sans-serif; /* Applied here */
+}
+        
+        section { padding: 50px 20px; border-bottom: 2px solid rgba(255,255,255,0.2); }
+        .grey-section { background-color: #114111; } /* Example for separate color scales */
+
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-button {
+    display: block;
+    padding: 20px 30px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(95,158,160,0.6);
+    transition: all 0.3s ease;
+}
+
+.game-button:hover {
+    background: rgba(0,0,0,0.7);
+    transform: scale(1.05);
+}
+
+a.back {
+    display: inline-block;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+</head>
+  
+<script>
+  (function() {
+    const now = new Date();
+    
+    // Get components
+    const month = now.getMonth() + 1; // Months are 0-11
+    const day = now.getDate();
+    const year = now.getFullYear().toString().slice(-2); // Get last two digits (26)
+
+    // Construct the filename: "41426.html"
+    const fileName = `${month}${day}${year}.html`;
+
+    // Update the link's href
+    const linkElement = document.getElementById('date-link');
+    linkElement.href = fileName;
+  })();
+</script>
+  
+<body>
+
+<h1>Older Blouges</h1>
+<p>Times passed idk man</p>
+
+  <div class="game-list">
+<a href="404.html" class="game-button">Nothing Yet!</a>
+</div>
