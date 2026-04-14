@@ -65,20 +65,25 @@ a.back {
 </head>
   
 <script>
+<script>
   (function() {
     const now = new Date();
     
     // Get components
-    const month = now.getMonth() + 1; // Months are 0-11
-    const day = now.getDate();
-    const year = now.getFullYear().toString().slice(-2); // Get last two digits (26)
+    const month = now.getMonth() + 1; 
+    // .padStart ensures 2 digits (e.g., "04" instead of "4")
+    const day = now.getDate().toString().padStart(2, '0');
+    const year = now.getFullYear().toString().slice(-2); 
 
-    // Construct the filename: "41426.html"
-    const fileName = `${month}${day}${year}.html`;
+    // Construct the filename with the folder path: "dates/41426.html"
+    // Remove .padStart(2, '0') from month if you prefer "41426" over "041426"
+    const fileName = `dates/${month}${day}${year}.html`;
 
-    // Update the link's href
+    // Target the link and swap the href
     const linkElement = document.getElementById('date-link');
-    linkElement.href = fileName;
+    if (linkElement) {
+      linkElement.href = fileName;
+    }
   })();
 </script>
   
@@ -87,10 +92,10 @@ a.back {
 <h1>Le Blouge</h1>
 <p>Idk like I write stuff that's based and cool heheheha</p>
 
-  <div class="game-list">
-<a id="date-link" href="#">
-  <button type="button">Today's Blouge</button>
-</a>
+<div class="game-list">
+  <a id="date-link" href="#">
+    <button type="button">Today's Blouge</button>
+  </a>
 <a href="previousblouge.html" class="game-button">Older Blouges</a>
 </div>
 
